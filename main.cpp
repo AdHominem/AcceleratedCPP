@@ -1,7 +1,7 @@
 #include "2.cpp"
 
 int main() {
-    pretty_print();
+    pretty_print_input();
 }
 
 // 0-4
