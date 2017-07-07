@@ -205,3 +205,32 @@ void triangle(size_t n) {
         cout << endl;
     }
 }
+
+void countdown() {
+    int i = 10;
+    while (i >= -5) {
+        cout << i << endl;
+        --i;
+    }
+}
+
+void product() {
+    size_t result = 1;
+    for (int i = 1; i < 10; ++i) {
+        result *= i;
+    }
+    cout << result << endl;
+}
+
+void check_num() {
+    cout << "Enter a number: ";
+    int a;
+    cin >> a;
+
+    cout << "Enter another number: ";
+    int b;
+    cin >> b;
+
+    cout << "The bigger number is " << (a > b ? a : b);
+
+}
