@@ -137,3 +137,39 @@ int pretty_print_input() {
     }
     return 0;
 }
+
+int pretty_print_2_4() {
+    cout << "Please enter your first name: ";
+
+    string name;
+    cin >> name;
+
+    const string greeting = "Hello, " + name + "!";
+
+    const int pad = 1;
+
+    const int rows = pad * 2 + 3;
+    const string::size_type cols = greeting.size() + pad * 2 + 2;
+    const string whitespace(greeting.size() + pad * 2, ' ');
+
+    cout << endl;
+
+    string::size_type row, col;
+    for (row = 0; row != rows; ++row) {
+        for (col = 0; col != cols; ++col) {
+            if (row == 0 || row == rows - 1 || col == 0 || col == cols - 1) {
+                cout << "*";
+            } else if (row == pad + 1 && col == pad + 1) {
+                cout << greeting;
+                col += greeting.size() - 1;
+            } else if (col == 1 && row != pad + 1) {
+                cout << whitespace;
+                col += whitespace.size() - 1;
+            } else {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+    return 0;
+}
