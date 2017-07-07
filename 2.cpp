@@ -173,3 +173,35 @@ int pretty_print_2_4() {
     }
     return 0;
 }
+
+// 2.5
+void square(size_t n) {
+    for (size_t row = 0; row < n; ++row) {
+        for (size_t col = 0; col < n; ++col) {
+            cout << (row == 0 || row == n - 1 || col == 0 || col == n - 1 ? "*" : " ");
+        }
+        cout << endl;
+    }
+}
+
+void rect(size_t height, size_t width) {
+    for (size_t row = 0; row < height; ++row) {
+        for (size_t col = 0; col < width; ++col) {
+            if (row == 0 || row == height - 1 || col == 0 || col == width - 1) {
+                cout << "*";
+            } else {
+                cout << " ";
+            }
+        }
+        cout << endl;
+    }
+}
+
+void triangle(size_t n) {
+    for (size_t row = 0; row < n; ++row) {
+        for (size_t col = 0; col < n; ++col) {
+            cout << (row == n - 1 || row == col || col == 0  ? "*" : " ");
+        }
+        cout << endl;
+    }
+}
