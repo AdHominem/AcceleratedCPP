@@ -46,3 +46,21 @@ void count_words() {
         words = filter(words, word);
     }
 }
+
+void word_length() {
+    cout << "Please enter some words: \n";
+
+    string word;
+    string longest;
+    string shortest;
+    while (cin >> word && word.compare("end") != 0) {
+        if (shortest.length() == 0 || word.length() < shortest.length()) {
+            shortest = word;
+        }
+        if (word.length() > longest.length()) {
+            longest = word;
+        }
+    }
+
+    cout << "Longest was " << longest << " and shortest was " << shortest;
+}
