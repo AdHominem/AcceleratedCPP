@@ -1,6 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
+#include <vector>
 
 using namespace std;
 
@@ -30,4 +31,17 @@ void squares_robust() {
     for (int i = 0; i < 1000; ++i) {
         cout << i << setw(digits(999 * 999) + 1) << i * i << endl;
     }
+}
+
+// 4.5
+istream& read(istream& in, vector<string>& words) {
+    if (in) {
+        words.clear();
+        string word;
+        while (in >> word && word.compare("end") != 0) {
+            words.push_back(word);
+        }
+        in.clear();
+    }
+    return in;
 }
