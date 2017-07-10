@@ -1,9 +1,6 @@
 #include <iostream>
 
-using std::cout;
-using std::cin;
-using std::string;
-using std::endl;
+using namespace std;
 
 // 2.0
 int pretty_print() {
@@ -223,14 +220,8 @@ void product() {
 }
 
 void check_num() {
-    cout << "Enter a number: ";
-    int a;
-    cin >> a;
-
-    cout << "Enter another number: ";
-    int b;
-    cin >> b;
-
+    cout << "Enter two numbers: " << endl;
+    int a, b;
+    cin >> a >> b;
     cout << "The bigger number is " << (a > b ? a : b);
-
 }
